@@ -22,13 +22,13 @@ $ npm run build
 ## install
 
 ```sh
-$ npm install isObject
+$ npm install @kikiki_kiki/is-object
 ```
 
 ## usage
 
 ```js
-import isObject from 'isObject';
+import isObject from '@kikiki_kiki/is-object';
 ```
 
 ```js

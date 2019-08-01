@@ -1,5 +1,5 @@
 {
-  "name": "isObject",
+  "name": "@kikiki_kiki/is-object",
   "version": "0.0.1",
   "description": "Determine if the parameter is Object. Verifies if it not an array, null, Date, and Class Object.",
   "main": "lib/index.js",
