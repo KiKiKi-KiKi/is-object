@@ -7,7 +7,8 @@
     "test": "jest",
     "test:w": "jest --watch",
     "test:coverage": "jest test --coverage",
-    "build": "./node_modules/.bin/babel src/index.js --out-dir lib/ --source-maps"
+    "build": "./node_modules/.bin/babel src/index.js --out-dir lib/ --source-maps",
+    "prepublishOnly": "npm run build"
   },
   "repository": "git@github.com:chaika-design/isObject.git",
   "keywords": [
