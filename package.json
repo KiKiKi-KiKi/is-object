@@ -1,0 +1,28 @@
+{
+  "name": "isObject",
+  "version": "0.0.1",
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "jest",
+    "build": "./node_modules/.bin/babel src/index.js --out-dir lib/ --source-maps"
+  },
+  "repository": "git@github.com:chaika-design/isObject.git",
+  "keywords": [
+    "isObject",
+    "object"
+  ],
+  "author": "Mori Hayashi <mori.kiki.hayashi@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chaika-design/isObject/issues"
+  },
+  "homepage": "https://github.com/chaika-design/isObject#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-transform-modules-commonjs": "^7.5.0",
+    "@babel/preset-env": "^7.5.5",
+    "jest": "^24.8.0"
+  }
+}
