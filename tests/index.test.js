@@ -17,6 +17,11 @@ describe('isObject', () => {
     expect( isObject(NaN) ).toBe(false);
   });
 
+  test('When param is Boolean, return false', () => {
+    expect( isObject( true ) ).toBe(false);
+    expect( isObject( false ) ).toBe(false);
+  });
+
   test('When param is function, return false', () => {
     expect( isObject( function(){ return true } ) ).toBe(false);
   });
@@ -36,5 +41,25 @@ describe('isObject', () => {
 
   test('When param is Object, return true', () => {
     expect( isObject( {} ) ).toBe(true);
+  });
+
+  test('When param is Date, return true', () => {
+    const date = new Date();
+    expect( isObject( date ) ).toBe(false);
+  });
+
+  test('When param is Symbol, return false', () => {
+    const symbol1 = Symbol();
+    expect( isObject( symbol1 ) ).toBe(false);
+    const symbol2 = Symbol( {} );
+    expect( isObject( symbol2 ) ).toBe(false);
+  });
+
+  test('When param is Class, return false', () => {
+    class MyClass {
+      constructor() {}
+    };
+    const classObj =  new MyClass();
+    expect( isObject( classObj ) ).toBe(false);
   });
 });
