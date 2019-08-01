@@ -3,7 +3,8 @@
 function isObject(val) {
   if( typeof(val) === 'object'
    && val !== null
-   && !Array.isArray(val) ) {
+   && !Array.isArray(val)
+   && val.constructor === Object ) {
     return true;
   }
   return false;
