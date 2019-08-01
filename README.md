@@ -62,12 +62,23 @@ isObject("");
 // => false
 ```
 
-`Date`, `Symbol`, `Class object` return `false`
+`Date`, `RegExp`, `Symbol`, `Class object` return `false`
 
 Date
 ```js
 const date = new Date();
 isObject(date);
+// => false
+```
+
+RegExp
+```js
+const regex1 = /\w+/;
+expect( isObject( regex1 ) ).toBe(false);
+// => false
+
+const regex2 = new RegExp('\\w+');
+expect( isObject( regex2 ) ).toBe(false);
 // => false
 ```
 

@@ -44,18 +44,34 @@ describe('isObject', () => {
   });
 
   test('When param is Date, return true', () => {
+    // typeof(date) => "object"
+    // date.constructor.name => "Date"
     const date = new Date();
     expect( isObject( date ) ).toBe(false);
   });
 
+  test('When param is RegExp Object, return true', () => {
+    // typeof(class) => "object"
+    // class.constructor.name => "RegExp"
+    const regex1 = /\w+/;
+    expect( isObject( regex1 ) ).toBe(false);
+
+    const regex2 = new RegExp('\\w+');
+    expect( isObject( regex2 ) ).toBe(false);
+  });
+
   test('When param is Symbol, return false', () => {
+    // typeof(symbol) => "symbol"
     const symbol1 = Symbol();
     expect( isObject( symbol1 ) ).toBe(false);
+
     const symbol2 = Symbol( {} );
     expect( isObject( symbol2 ) ).toBe(false);
   });
 
   test('When param is Class, return false', () => {
+    // typeof(class) => "object"
+    // class.constructor.name => "Class Name"
     class MyClass {
       constructor() {}
     };
