@@ -29,4 +29,12 @@ describe('isObject', () => {
     expect( isObject( 1 ) ).toBe(false);
     expect( isObject( -1 ) ).toBe(false);
   });
+
+  test('When param is Array, return false', () => {
+    expect( isObject( [] ) ).toBe(false);
+  });
+
+  test('When param is Object, return true', () => {
+    expect( isObject( {} ) ).toBe(true);
+  });
 });
