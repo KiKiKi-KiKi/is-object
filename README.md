@@ -5,8 +5,8 @@
 
 # isObject
 
-`isObject( val: any ): Boolean` return `true` if val is Object.
-Verifies if it not an array, null, Date, and Class Object.
+`isObject( val: any ) #=> Boolean`  
+Determine if the parameter is Object (`{}`). Verifies if it not an array, `null`, `function`, `Date`, `RegExp`, `Symbol` and `Class Object`.
 
 ## test
 
@@ -62,7 +62,14 @@ isObject("");
 // => false
 ```
 
-`Date`, `RegExp`, `Symbol`, `Class object` return `false`
+`function`, `Date`, `RegExp`, `Symbol`, `Class object` return `false`
+
+function
+```js
+const func = function() { return true; }
+isObject(func);
+// => false
+```
 
 Date
 ```js
@@ -84,11 +91,11 @@ expect( isObject( regex2 ) ).toBe(false);
 
 Symbol
 ```js
-const symbol1 = new Symbol();
+const symbol1 = Symbol();
 isObject(symbol1);
 // => false
 
-const symbol2 = new Symbol( {} );
+const symbol2 = Symbol( {} );
 isObject(symbol2);
 // => false
 ```
@@ -98,7 +105,7 @@ Class
 class MyClass {
   constructor() {}
 };
-const classObj = MyClass();
+const classObj = new MyClass();
 isObject(classObj);
 // => false
 ```

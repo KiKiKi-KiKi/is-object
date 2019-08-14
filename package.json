@@ -1,7 +1,7 @@
 {
   "name": "@kikiki_kiki/is-object",
-  "version": "0.0.2",
-  "description": "Determine if the parameter is Object. Verifies if it not an array, null, Date, and Class Object.",
+  "version": "1.0.0",
+  "description": "Determine if the parameter is Object. Verifies if it not an array, null, function, Date, RegExp, Symbol and Class Object.",
   "main": "lib/index.js",
   "scripts": {
     "test": "jest",
