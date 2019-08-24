@@ -28,6 +28,7 @@ describe('isObject', () => {
 
   test('When param is String, return false', () => {
     expect( isObject( 'String' ) ).toBe(false);
+    expect( isObject( new String('String') ) ).toBe(false);
   });
 
   test('When param is Number, return false', () => {
@@ -37,10 +38,12 @@ describe('isObject', () => {
 
   test('When param is Array, return false', () => {
     expect( isObject( [] ) ).toBe(false);
+    expect( isObject( new Array() ) ).toBe(false);
   });
 
   test('When param is Object, return true', () => {
     expect( isObject( {} ) ).toBe(true);
+    expect( isObject( new Object() ) ).toBe(true);
   });
 
   test('When param is Date, return true', () => {
