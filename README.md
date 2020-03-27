@@ -1,7 +1,7 @@
 [![NPM version](https://badgen.net/npm/v/@kikiki_kiki/is-object)](https://www.npmjs.com/package/@kikiki_kiki/is-object)
-[![Build Status](https://travis-ci.org/chaika-design/isObject.svg?branch=master)](https://travis-ci.org/chaika-design/isObject)
-[![codecov](https://codecov.io/gh/chaika-design/isObject/branch/master/graph/badge.svg)](https://codecov.io/gh/chaika-design/isObject)
-[![MIT License](http://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://github.com/chaika-design/isObject/blob/master/package.json)
+[![Build Status](https://travis-ci.org/KiKiKi-KiKi/isObject.svg?branch=master)](https://travis-ci.org/KiKiKi-KiKi/isObject)
+[![codecov](https://codecov.io/gh/KiKiKi-KiKi/isObject/branch/master/graph/badge.svg)](https://codecov.io/gh/KiKiKi-KiKi/isObject)
+[![MIT License](http://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://github.com/KiKiKi-KiKi/isObject/blob/master/package.json)
 
 # isObject
 

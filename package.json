@@ -1,6 +1,6 @@
 {
   "name": "@kikiki_kiki/is-object",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Determine if the parameter is Object. Verifies if it not an array, null, function, Date, RegExp, Symbol and Class Object.",
   "main": "lib/index.js",
   "scripts": {
@@ -10,17 +10,17 @@
     "build": "./node_modules/.bin/babel src/index.js --out-dir lib/ --source-maps",
     "prepublishOnly": "npm run build"
   },
-  "repository": "git@github.com:chaika-design/isObject.git",
+  "repository": "git@github.com:KiKiKi-KiKi/isObject.git",
   "keywords": [
     "isObject",
     "object"
   ],
-  "author": "Mori Hayashi <mori.kiki.hayashi@gmail.com>",
+  "author": "KiKiKi KiKi <https://twitter.com/KiKiKi_KiKi>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/chaika-design/isObject/issues"
+    "url": "https://github.com/KiKiKi-KiKi/isObject/issues"
   },
-  "homepage": "https://github.com/chaika-design/isObject#readme",
+  "homepage": "https://github.com/KiKiKi-KiKi/isObject#readme",
   "devDependencies": {
     "@babel/cli": "^7.5.5",
     "@babel/core": "^7.5.5",
