@@ -2,15 +2,13 @@
   "name": "@kikiki_kiki/is-object",
   "version": "1.0.1",
   "description": "Determine if the parameter is Object. Verifies if it not an array, null, function, Date, RegExp, Symbol and Class Object.",
-  "main": "lib/index.js",
-  "scripts": {
-    "test": "jest",
-    "test:w": "jest --watch",
-    "test:coverage": "jest test --coverage",
-    "build": "./node_modules/.bin/babel src/index.js --out-dir lib/ --source-maps",
-    "prepublishOnly": "npm run build"
+  "main": "dist-cjs/index.js",
+  "module": "dist-esm/index.js",
+  "types": "dist-cjs/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:KiKiKi-KiKi/isObject.git"
   },
-  "repository": "git@github.com:KiKiKi-KiKi/isObject.git",
   "keywords": [
     "isObject",
     "object"
@@ -21,12 +19,30 @@
     "url": "https://github.com/KiKiKi-KiKi/isObject/issues"
   },
   "homepage": "https://github.com/KiKiKi-KiKi/isObject#readme",
+  "scripts": {
+    "build:cjs": "tsc --project . --module commonjs --outDir ./dist-cjs",
+    "build:esm": "tsc --project . --module esNext --outDir ./dist-esm",
+    "build": "npm run build:cjs && npm run build:esm",
+    "test": "jest --runInBand",
+    "test:w": "jest --runInBand --watch",
+    "test:coverage": "jest test --coverage",
+    "lint": "eslint --ext .js,.ts src/",
+    "lint:fix": "npm run lint -- --fix",
+    "format": "npm run lint:fix && prettier --write 'src/**/*.{js,ts}'",
+    "prepublishOnly": "npm run build",
+    "cleanup": "rimraf dist-cjs dist-esm coverage"
+  },
   "devDependencies": {
-    "@babel/cli": "^7.5.5",
-    "@babel/core": "^7.5.5",
-    "@babel/plugin-transform-modules-commonjs": "^7.5.0",
-    "@babel/preset-env": "^7.5.5",
-    "codecov": "^3.5.0",
-    "jest": "^24.8.0"
+    "@types/jest": "^29.5.4",
+    "@typescript-eslint/eslint-plugin": "^6.4.1",
+    "@typescript-eslint/parser": "^6.4.1",
+    "codecov": "^3.8.2",
+    "eslint": "^8.47.0",
+    "eslint-config-prettier": "^9.0.0",
+    "jest": "^29.6.3",
+    "prettier": "^3.0.2",
+    "rimraf": "^5.0.1",
+    "ts-jest": "^29.1.1",
+    "typescript": "^5.1.6"
   }
 }

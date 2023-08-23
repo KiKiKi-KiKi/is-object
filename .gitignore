@@ -8,4 +8,11 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+/dist
+/dist-cjs
+/dist-esm
+
+.vscode/*
+!.vscode/settings.sample.json
+
 !.gitkeep
