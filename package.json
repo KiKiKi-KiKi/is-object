@@ -2,18 +2,13 @@
   "name": "@kikiki_kiki/is-object",
   "version": "1.0.1",
   "description": "Determine if the parameter is Object. Verifies if it not an array, null, function, Date, RegExp, Symbol and Class Object.",
-  "main": "lib/index.js",
-  "scripts": {
-    "test": "jest",
-    "test:w": "jest --watch",
-    "test:coverage": "jest test --coverage",
-    "build": "./node_modules/.bin/babel src/index.js --out-dir lib/ --source-maps",
-    "lint": "eslint --ext .js,.ts src/",
-    "lint:fix": "npm run lint -- --fix",
-    "format": "npm run lint:fix && prettier --write 'src/**/*.{js,ts}'",
-    "prepublishOnly": "npm run build"
+  "main": "dist-cjs/index.js",
+  "module": "dist-esm/index.js",
+  "types": "dist-cjs/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:KiKiKi-KiKi/isObject.git"
   },
-  "repository": "git@github.com:KiKiKi-KiKi/isObject.git",
   "keywords": [
     "isObject",
     "object"
@@ -24,6 +19,18 @@
     "url": "https://github.com/KiKiKi-KiKi/isObject/issues"
   },
   "homepage": "https://github.com/KiKiKi-KiKi/isObject#readme",
+  "scripts": {
+    "build:cjs": "tsc --project . --module commonjs --outDir ./dist-cjs",
+    "build:esm": "tsc --project . --module esNext --outDir ./dist-esm",
+    "build": "npm run build:cjs && npm run build:esm",
+    "test": "jest",
+    "test:w": "jest --watch",
+    "test:coverage": "jest test --coverage",
+    "lint": "eslint --ext .js,.ts src/",
+    "lint:fix": "npm run lint -- --fix",
+    "format": "npm run lint:fix && prettier --write 'src/**/*.{js,ts}'",
+    "prepublishOnly": "npm run build"
+  },
   "devDependencies": {
     "@babel/cli": "^7.22.10",
     "@babel/core": "^7.22.10",
