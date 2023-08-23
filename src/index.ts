@@ -1,6 +1,6 @@
 'use strict';
 
-function isObject(value?: any): value is Record<string, unknown> {
+function isObject(value?: unknown): value is Record<string, unknown> {
   return (
     value !== null && typeof value === 'object' && value.constructor === Object
   );
