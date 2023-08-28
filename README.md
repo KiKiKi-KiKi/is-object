@@ -1,35 +1,32 @@
 [![NPM version](https://badgen.net/npm/v/@kikiki_kiki/is-object)](https://www.npmjs.com/package/@kikiki_kiki/is-object)
-![Build Status](https://github.com/KiKiKi-KiKi/isObject/actions/workflows/coverage.yml/badge.svg?branch=main)
-[![codecov](https://codecov.io/gh/KiKiKi-KiKi/isObject/branch/master/graph/badge.svg)](https://codecov.io/gh/KiKiKi-KiKi/isObject)
+![Build Status](https://github.com/KiKiKi-KiKi/isObject/actions/workflows/build.yml/badge.svg?branch=main)
+[![coverage](https://kikiki-kiki.github.io/isObject/badges/coverage.svg)](https://github.com/KiKiKi-KiKi/isObject/actions)
 [![MIT License](http://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://github.com/KiKiKi-KiKi/isObject/blob/master/package.json)
 
 # isObject
 
-`isObject( val: any ) #=> Boolean`  
+```typescript
+function isObject(value?: unknown): value is Record<string, unknown>;
+```
+
 Determine if the parameter is Object (`{}`). Verifies if it not an array, `null`, `function`, `Date`, `RegExp`, `Symbol` and `Class Object`.
 
-## test
-
-```sh
-$ npm run test
-```
-
-## build
-
-```sh
-$ npm run build
-```
-
-## install
+## :rocket: install
 
 ```sh
 $ npm install @kikiki_kiki/is-object
 ```
 
-## usage
+## :rabbit: usage
 
 ```js
 import isObject from '@kikiki_kiki/is-object';
+```
+
+## :rotating_light: test
+
+```sh
+$ npm run test
 ```
 
 ```js
