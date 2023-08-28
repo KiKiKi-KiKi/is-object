@@ -5,31 +5,28 @@
 
 # isObject
 
-`isObject( val: any ) #=> Boolean`  
+```typescript
+function isObject(value?: unknown): value is Record<string, unknown>;
+```
+
 Determine if the parameter is Object (`{}`). Verifies if it not an array, `null`, `function`, `Date`, `RegExp`, `Symbol` and `Class Object`.
 
-## test
-
-```sh
-$ npm run test
-```
-
-## build
-
-```sh
-$ npm run build
-```
-
-## install
+## :rocket: install
 
 ```sh
 $ npm install @kikiki_kiki/is-object
 ```
 
-## usage
+## :rabbit: usage
 
 ```js
 import isObject from '@kikiki_kiki/is-object';
+```
+
+## :rotating_light: test
+
+```sh
+$ npm run test
 ```
 
 ```js
