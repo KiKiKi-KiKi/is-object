@@ -7,7 +7,7 @@
   "types": "dist-cjs/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "git@github.com:KiKiKi-KiKi/isObject.git"
+    "url": "git@github.com:KiKiKi-KiKi/is-object.git"
   },
   "keywords": [
     "isObject",
@@ -16,9 +16,9 @@
   "author": "KiKiKi KiKi <https://twitter.com/KiKiKi_KiKi>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/KiKiKi-KiKi/isObject/issues"
+    "url": "https://github.com/KiKiKi-KiKi/is-object/issues"
   },
-  "homepage": "https://github.com/KiKiKi-KiKi/isObject#readme",
+  "homepage": "https://github.com/KiKiKi-KiKi/is-object#readme",
   "scripts": {
     "build:cjs": "tsc --project . --module commonjs --outDir ./dist-cjs",
     "build:esm": "tsc --project . --module esNext --outDir ./dist-esm",
