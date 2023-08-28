@@ -1,0 +1,37 @@
+name: CI
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    name: Test on node ${{ matrix.node_version }} and ${{ matrix.os }}
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [16.x, 18.x, 20.x]
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: setup
+        run: npm ci
+      - name: eslint review
+        uses: reviewdog/action-eslint@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          reporter: github-pr-review
+          eslint_flags: './src/**/*.{ts,js}'
+      - name: Run eslint
+        run: npm run lint
+      - name: Run Jest
+        run: npm run test:coverage:summary
+      - name: Jest Coverage Comment
+        uses: MishaKav/jest-coverage-comment@v1.0.23
+        with:
+          coverage-summary-path: ./coverage/coverage-summary.json
