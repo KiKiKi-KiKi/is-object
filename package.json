@@ -31,13 +31,12 @@
     "lint:fix": "npm run lint -- --fix",
     "format": "npm run lint:fix && prettier --write 'src/**/*.{js,ts}'",
     "prepublishOnly": "npm run build",
-    "cleanup": "rimraf dist-cjs dist-esm coverage"
+    "cleanup": "rimraf dist-cjs dist-esm coverage junit.xml"
   },
   "devDependencies": {
     "@types/jest": "^29.5.4",
     "@typescript-eslint/eslint-plugin": "^6.4.1",
     "@typescript-eslint/parser": "^6.4.1",
-    "codecov": "^3.8.2",
     "eslint": "^8.47.0",
     "eslint-config-prettier": "^9.0.0",
     "jest": "^29.6.3",
