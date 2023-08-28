@@ -1,4 +1,4 @@
-name: Coverage
+name: Build
 
 on:
   push:
@@ -32,6 +32,7 @@ jobs:
       - name: Jest coverage report
         run: npm run test:coverage:summary
       - run: npm run test:coverage
+      - run: npm run build
       - name: Create Coverage Badges
         uses: jaywcjlove/coverage-badges-cli@main
         with:
