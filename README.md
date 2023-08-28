@@ -1,5 +1,5 @@
 [![NPM version](https://badgen.net/npm/v/@kikiki_kiki/is-object)](https://www.npmjs.com/package/@kikiki_kiki/is-object)
-[![Build Status](https://travis-ci.org/KiKiKi-KiKi/isObject.svg?branch=master)](https://travis-ci.org/KiKiKi-KiKi/isObject)
+![Build Status](https://github.com/KiKiKi-KiKi/isObject/actions/workflows/main.yml/badge.svg?branch=main)
 [![codecov](https://codecov.io/gh/KiKiKi-KiKi/isObject/branch/master/graph/badge.svg)](https://codecov.io/gh/KiKiKi-KiKi/isObject)
 [![MIT License](http://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://github.com/KiKiKi-KiKi/isObject/blob/master/package.json)
 
@@ -58,20 +58,24 @@ isObject(1);
 isObject(-1);
 // => false
 
-isObject("");
+isObject('');
 // => false
 ```
 
 `function`, `Date`, `RegExp`, `Symbol`, `Class object` return `false`
 
 function
+
 ```js
-const func = function() { return true; }
+const func = function () {
+  return true;
+};
 isObject(func);
 // => false
 ```
 
 Date
+
 ```js
 const date = new Date();
 isObject(date);
@@ -79,32 +83,35 @@ isObject(date);
 ```
 
 RegExp
+
 ```js
 const regex1 = /\w+/;
-expect( isObject( regex1 ) ).toBe(false);
+expect(isObject(regex1)).toBe(false);
 // => false
 
 const regex2 = new RegExp('\\w+');
-expect( isObject( regex2 ) ).toBe(false);
+expect(isObject(regex2)).toBe(false);
 // => false
 ```
 
 Symbol
+
 ```js
 const symbol1 = Symbol();
 isObject(symbol1);
 // => false
 
-const symbol2 = Symbol( {} );
+const symbol2 = Symbol({});
 isObject(symbol2);
 // => false
 ```
 
 Class
+
 ```js
 class MyClass {
   constructor() {}
-};
+}
 const classObj = new MyClass();
 isObject(classObj);
 // => false
