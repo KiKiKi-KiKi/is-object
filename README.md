@@ -1,6 +1,6 @@
 [![NPM version](https://badgen.net/npm/v/@kikiki_kiki/is-object)](https://www.npmjs.com/package/@kikiki_kiki/is-object)
 ![Build Status](https://github.com/KiKiKi-KiKi/isObject/actions/workflows/build.yml/badge.svg?branch=main)
-[![coverage](https://kikiki-kiki.github.io/isObject/badges/coverage.svg)](https://github.com/KiKiKi-KiKi/isObject/actions)
+[![coverage](https://kikiki-kiki.github.io/isObject/badges.svg)](https://github.com/KiKiKi-KiKi/isObject/actions)
 [![MIT License](http://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://github.com/KiKiKi-KiKi/isObject/blob/master/package.json)
 
 # isObject
