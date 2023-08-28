@@ -26,6 +26,7 @@
     "test": "jest --runInBand",
     "test:w": "jest --runInBand --watch",
     "test:coverage": "jest test --coverage",
+    "test:coverage:summary": "jest test --coverage --coverageReporters=\"json-summary\"",
     "lint": "eslint --ext .js,.ts src/",
     "lint:fix": "npm run lint -- --fix",
     "format": "npm run lint:fix && prettier --write 'src/**/*.{js,ts}'",
