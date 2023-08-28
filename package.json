@@ -31,7 +31,7 @@
     "lint:fix": "npm run lint -- --fix",
     "format": "npm run lint:fix && prettier --write 'src/**/*.{js,ts}'",
     "prepublishOnly": "npm run build",
-    "cleanup": "rimraf dist-cjs dist-esm coverage"
+    "cleanup": "rimraf dist-cjs dist-esm coverage junit.xml"
   },
   "devDependencies": {
     "@types/jest": "^29.5.4",
